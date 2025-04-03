@@ -1,0 +1,1304 @@
+
+*{
+  font-family: montserrat;
+}
+/* index page */
+
+/* end  */
+.navbar{
+  background:white;
+  backdrop-filter:blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 10px;
+  
+
+}
+
+.navbar-text{
+  text-decoration-color: black;
+}
+
+
+a:hover {
+  color: #2eca6a;
+  text-decoration: none;
+}
+
+
+
+/* Basic Navbar Styling */
+#navbar {
+  transition: all 0.3s ease;
+}
+
+/* Shadow effect for navbar */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Links */
+.navbar-nav .nav-item .nav-link {
+  font-size: 1rem;
+  padding: 8px 16px;
+  color: #5a5a5a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Brand name styling */
+.navbar-brand {
+font-size: 35px; /* Reduce size of the brand name */
+font-weight: bold;
+color: #021710; 
+text-transform: uppercase;
+letter-spacing: 1px;
+padding: 0;
+}
+
+/* Custom color for the 'Estate' part of the brand */
+.navbar-brand .text-success {
+color: #28a745; /* Green for the word 'Estate' */
+}
+/* Active link */
+.navbar-nav .nav-item .nav-link.active {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Hover effect for links */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fff;
+  background-color: #409c56;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+/* Search Form */
+.search-input {
+  width: 300px;
+  transition: width 0.3s ease;
+}
+
+.search-input:focus {
+  width: 350px;
+  border-color: #28a745;
+}
+
+/* Search Button */
+.search-btn {
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-left:10px;
+  margin-bottom: 10px;
+
+}
+
+.search-btn:hover {
+  background-color: #218838;
+}
+
+/* Welcome Message */
+.navbar-text {
+  font-size: 1rem;
+  color: #5a5a5a;
+}
+
+/* Mobile Navbar Styling */
+@media (max-width: 991px) {
+  #navbar .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #28a745;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 1.1rem;
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .search-input {
+    width: 100%;
+  }
+}
+
+
+
+.navbar-text {
+  font-size: 1.1rem;             
+  font-weight: bold;              
+  color:black;                 
+  background-color: #28a745;       
+  border-radius: 4px;             
+  padding: 8px 16px;               
+  margin-left: 16px;               
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+  transition: all 0.3s ease;       
+  display: inline-block;           
+}
+
+/* Hover effect for the welcome message */
+.navbar-text:hover {
+  background-color: #3ea1d3;      
+  color: white;                  
+  transform: translateY(-2px);   
+}
+
+
+
+
+/*  footer   */
+/* Resetting some basic styles for layout */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+html, body {
+height: 100%;
+}
+
+/* Section footer styles */
+.section-footer {
+background-color: #f8f9fa; 
+padding: 50px 0;
+position: relative;
+bottom: 0;
+width: 100%;
+margin-top: 50px;
+}
+
+.widget-a {
+padding: 20px;
+}
+
+.w-header-a h3 {
+font-size: 22px;
+font-weight: bold;
+color: #333;
+}
+
+.w-body-a p, .w-body-a a {
+font-size: 16px;
+color: #777;
+}
+
+.w-footer-a ul {
+list-style-type: none;
+padding-left: 0;
+}
+
+.w-footer-a ul li {
+font-size: 14px;
+color: #555;
+}
+
+.w-footer-a ul li span {
+font-weight: bold;
+}
+
+/* Styling the footer nav */
+.nav-footer {
+margin-top: 30px;
+text-align: center;
+}
+
+.nav-footer ul {
+list-style: none;
+padding-left: 0;
+}
+
+.nav-footer ul li {
+display: inline;
+margin-right: 20px;
+}
+
+.nav-footer ul li a {
+color: #555;
+text-decoration: none;
+font-size: 16px;
+}
+
+.nav-footer ul li a:hover {
+color: #007bff;
+}
+
+/* Footer social media icons */
+footer .col-md-4 {
+text-align: center;
+margin-top: 20px;
+}
+
+footer .col-md-4 i {
+font-size: 20px;
+margin: 0 10px;
+cursor: pointer;
+color: #555;
+}
+
+footer .col-md-4 i:hover {
+color: #007bff;
+}
+
+/* Footer text */
+footer .footer {
+text-align: center;
+padding: 20px 0;
+background-color: #333;
+color: #fff;
+}
+
+footer .footer p {
+font-size: 14px;
+}
+
+
+.container {
+width: 100%;
+}
+
+/* If the content of the page is too short, ensure the footer stays at the bottom of the viewport */
+body {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+main {
+flex: 1;
+}
+
+
+
+
+
+
+
+/* General Styling */
+body {
+font-family: 'Arial', sans-serif;
+background-color: #f7f7f7;
+margin: 0;
+padding: 0;
+}
+
+/* Hero Section (Carousel) */
+.carousel-item img {
+object-fit: cover;
+}
+
+/* Category Sidebar */
+
+.row .category-title{
+ font-size: 50px;
+ justify-content: center;
+ align-items: center;
+ margin-left: 550px;
+ 
+
+}
+#cat1{
+
+color: rgb(0, 0, 0);
+text-align:left;
+text-shadow: #555;
+}
+
+#cat1 h2 {
+font-size: 5rem;
+margin-bottom: 20px;
+text-align: center;
+}
+
+
+.card {
+border-radius: 10px;
+padding: 20px;
+}
+
+.card h4 {
+font-size: 1.5rem;
+font-weight: 600;
+}
+
+.list-group-item {
+font-size: 1rem;
+color: #333;
+}
+
+.list-group-item a {
+text-decoration: none;
+color: inherit;
+font-weight: 500;
+}
+
+.list-group-item:hover {
+background-color: #f1f1f1;
+}
+
+/* Property Cards */
+.card-img-top {
+object-fit: cover;
+height: 200px;
+}
+
+.card-body {
+padding: 20px;
+}
+
+.card-title {
+font-size: 1.1rem;
+font-weight: 600;
+}
+
+.card-text {
+font-size: 1rem;
+color: #333;
+}
+
+.card .btn {
+font-size: 1rem;
+padding: 10px;
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+background-color: #0056b3;
+}
+
+.card .btn:focus {
+outline: none;
+}
+
+/* Container spacing */
+.mt-5 {
+margin-top: 50px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+
+.card-img-top {
+  height: 180px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+.btn {
+  font-size: 0.9rem;
+}
+
+.col-md-4 {
+  width: 100%;
+}
+}
+
+
+
+
+
+
+/* product page*/
+
+body {
+background-color: #f8f9fa;
+font-family: 'Arial', sans-serif;
+}
+
+/* Property Image Styling */
+img.img-fluid {
+object-fit: cover;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Property Title */
+h1 {
+font-size: 2.5rem;
+font-weight: bold;
+color: #333;
+letter-spacing: 1px;
+}
+
+/* Property Price */
+.fs-4 {
+font-size: 1.75rem;
+color: #28a745; /* Green for price */
+font-weight: 600;
+}
+
+/* Buttons Styling */
+.btn {
+padding: 12px 20px;
+font-size: 1.2rem;
+text-transform: uppercase;
+border-radius: 5px;
+}
+
+.btn-primary {
+background-color: #007bff;
+border: none;
+}
+
+.btn-primary:hover {
+background-color: #0056b3;
+}
+
+.btn-secondary {
+background-color: #6c757d;
+border: none;
+}
+
+.btn-secondary:hover {
+background-color: #5a6268;
+}
+
+/* Alerts Styling */
+.alert {
+font-size: 1.2rem;
+padding: 15px;
+border-radius: 10px;
+}
+
+.alert-success {
+background-color: #28a745;
+color: white;
+}
+
+.alert-danger {
+background-color: #dc3545;
+color: white;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+.row {
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.8rem; /* Smaller title font size on mobile */
+}
+
+.fs-4 {
+    font-size: 1.5rem; /* Smaller price font on mobile */
+}
+
+.btn {
+    font-size: 1rem; /* Smaller buttons on mobile */
+}
+}
+
+
+/* bookpage*/ 
+/* Global Styling */
+body {
+background-color: #f8f9fa; /* Light background color */
+font-family: 'Arial', sans-serif;
+color: #333;
+}
+
+/* Card Styling */
+.card {
+border-radius: 10px;
+border: none;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+font-weight: bold;
+font-size: 1.2rem;
+text-transform: uppercase;
+}
+
+/* Customer Details */
+.card-header.bg-success {
+background-color: #28a745 !important;
+}
+
+/* Image Styling */
+.img-fluid {
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Property Details */
+.card-title {
+font-size: 1.5rem;
+color: #333;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+/* Quantity Input */
+input[type="number"] {
+width: 80px;
+text-align: center;
+font-size: 1rem;
+margin: 0 10px;
+}
+
+/* Buttons */
+.btn {
+font-size: 1rem;
+padding: 10px 20px;
+border-radius: 5px;
+}
+
+.btn-danger {
+background-color: #dc3545;
+border: none;
+}
+
+.btn-danger:hover {
+background-color: #c82333;
+}
+
+.btn-warning {
+background-color: #ffc107;
+border: none;
+}
+
+.btn-warning:hover {
+background-color: #e0a800;
+}
+
+.btn-primary {
+background-color: #007bff;
+color: white;
+border: none;
+}
+
+.btn-primary:hover {
+background-color: #0056b3;
+}
+
+/* Total Amount Section */
+.card-body p {
+font-size: 1.2rem;
+margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.row {
+    flex-direction: column;
+}
+
+.col-md-8, .col-md-4 {
+    width: 100%;
+}
+
+.card-body p {
+    font-size: 1rem;
+}
+
+.btn {
+    width: 100%;
+}
+}
+
+
+/* contact us page design*/
+
+/* General Styles */
+body {
+font-family: 'Arial', sans-serif;
+
+}
+
+.contact {
+background-color: #f9f9f9;
+
+padding-top: 60px;
+}
+
+.contact .container {
+max-width: 1200px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.contact-form h2 {
+font-size: 32px;
+color: #333;
+margin-bottom: 20px;
+}
+
+.contact-form .form-control {
+border-radius: 5px;
+font-size: 16px;
+padding: 12px;
+margin-bottom: 10px;
+border: 1px solid #ddd;
+
+}
+
+.contact-form .form-control:focus {
+border-color: #007bff;
+}
+
+.contact-form button {
+background-color: #007bff;
+color: white;
+padding: 12px;
+font-size: 16px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.contact-form button:hover {
+background-color: #0056b3;
+}
+
+/* Contact Info Sidebar */
+.contact-info .icon-box {
+background-color: #fff;
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info .icon-box-icon {
+font-size: 36px;
+color: #007bff;
+margin-bottom: 10px;
+}
+
+.contact-info h4 {
+font-size: 22px;
+color: #333;
+}
+
+.contact-info .socials-footer ul {
+padding-left: 0;
+list-style: none;
+}
+
+.contact-info .socials-footer ul li {
+display: inline-block;
+margin-right: 10px;
+}
+
+.contact-info .socials-footer a {
+font-size: 20px;
+color: #007bff;
+text-decoration: none;
+}
+
+.contact-info .socials-footer a:hover {
+color: #0056b3;
+}
+
+
+
+@media (max-width: 768px) {
+.contact .container {
+  padding: 0 15px;
+}
+
+.contact .row {
+  flex-direction: column-reverse;
+}
+
+.contact-form {
+  margin-bottom: 20px;
+}
+
+.contact-info .icon-box {
+  margin-bottom: 10px;
+}
+}
+.image-container {
+position: relative;
+width: 100%;
+max-width: 600px;  /* Adjust the image size */
+}
+
+.image-container img {
+width:auto;
+height:auto;
+}
+
+.text-overlay {
+position:absolute;
+top: 60%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: rgb(255, 253, 253);  /* Text color */
+font-size:70px;  /* Text size */
+font-weight:lighter; /* Optional */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Optional shadow */
+text-align:left;
+}
+/* Featured Properties Section */
+.featured {
+background: #fff;
+padding: 50px 0;
+text-align: center;
+}
+
+.featured h2 {
+font-size: 2rem;
+margin-bottom: 30px;
+color: #333;
+}
+
+.property-list {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.property-card {
+background: #f9f9f9;
+width: 300px;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+transition: transform 0.3s ease-in-out;
+}
+
+.property-card img {
+width: 100%;
+height: 200px;
+/* object-fit: cover; */
+}
+
+.property-card .info {
+padding: 20px;
+}
+
+.property-card h3 {
+font-size: 1.5rem;
+margin-bottom: 10px;
+color: #333;
+}
+
+.property-card p {
+color: #777;
+font-size: 1rem;
+}
+
+.property-card:hover {
+transform: scale(1.05);
+}
+
+/* Why Choose Us Section */
+.why-choose {
+  background: #f9f9f9;
+  color: #0c0c0c;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.why-choose h2 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.why-choose p {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+
+
+.footer a {
+color: #fff;
+text-decoration: none;
+margin: 0 15px;
+}
+
+.footer a:hover {
+text-decoration: underline;
+}
+
+
+
+/* Custom Styles */
+
+/* Container Styling */
+.container {
+  max-width: 900px;
+}
+
+/* Card Styling */
+.card {
+  background-color: #bfe5d2;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.bg-primary {
+  background-color: #1c7941 !important;
+}
+
+/* Text Styling */
+.text-center h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.form-group label {
+  
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Form Control Styling */
+.form-control {
+  border-radius: 0.375rem;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+}
+
+/* Submit Button Styling */
+.btn.btn-primary {
+  background-color: #1e9137;
+  border-color: #218a49;
+  transition: background-color 0.3s;
+  font-size: 1.25rem;
+}
+
+.btn.btn-primary:hover {
+  background-color: #52af66;
+  border-color: #30863b;
+}
+
+/* Alert Styling */
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  font-weight: 600;
+}
+
+/* Registration Link */
+.text-primary {
+  color: #216739 !important;
+}
+
+.text-primary:hover {
+  text-decoration: underline;
+}
+
+/* Additional spacing for form elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn-lg {
+  padding: 12px 20px;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+/************************login css **********************************/
+
+input#id_username {
+padding-left: 40%;
+padding-bottom: 18px;
+border: 0px solid white;
+border-radius: 6px;
+}
+
+input#id_username:hover{
+border: 1px solid rgb(0, 183, 255);
+border-color: white;
+}
+
+input#id_password {
+padding-left: 40%;
+padding-bottom: 18px;
+border: 0px solid white;
+border-radius: 6px;
+}
+
+input#id_password:hover {
+border: 1px solid rgb(0, 183, 255);
+border-color: white;
+}
+/* loginpage css */
+body {
+  background-color: #f4f9f9; /* Light grayish background for the whole page */
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.text-center h2 {
+  color: white;
+}
+
+.bg-primary {
+  background-color: #4CAF50 !important; /* Green background for the header */
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: #4CAF50; /* Green color for primary buttons */
+  border-color: #4CAF50;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+  border-color: #45a049;
+}
+
+.alert-danger {
+  background-color: #f44336; /* Red for error message */
+  color: white;
+}
+
+.btn-success {
+  background-color: #28a745; /* Green color for Register button */
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+/* property rent view */
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  overflow-x:hidden;
+}
+
+/* Carousel Image Section */
+.carousel-inner img {
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+
+/* Property Details Section */
+h1 {
+  color: #343a40; /* Dark gray for the title */
+  font-weight: bold;
+}
+
+.fs-4 {
+  font-size: 1.25rem; /* Make the text slightly larger */
+}
+
+.text-success {
+  color: #28a745; /* Green color for important information */
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.d-flex .btn {
+  padding: 12px 20px; /* Make buttons larger for easier clicking */
+  font-size: 1.1rem; /* Slightly larger text in buttons */
+}
+
+/* Button Styles */
+.btn-primary, .btn-success, .btn-secondary {
+  border-radius: 8px; /* Rounded corners for buttons */
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.alert-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.alert-danger {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-inner img {
+      height: auto; /* Adjust carousel image height on small screens */
+  }
+
+  .col-md-6 {
+      margin-bottom: 30px;
+  }
+}
+/* product.html css */
+
+
+/* feedback form css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.feedback {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.feedback-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form p {
+  text-align: left;
+  margin: 15px 0;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.feedback-form input[type="submit"],
+.btn-submit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.feedback-form input[type="submit"]:hover,
+.btn-submit:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .feedback {
+      padding: 1rem;
+  }
+
+  .feedback-title {
+      font-size: 1.5rem;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea {
+      font-size: 0.9rem;
+      padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-title {
+      font-size: 1.2rem;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea {
+      font-size: 0.85rem;
+      padding: 6px;
+  }
+
+  .btn-submit {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+  }
+}
+
+/* payment success */
+/* General Styling for Text and Background */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for Success Message */
+.text-center {
+  text-align: center;
+}
+
+/* Styling the success container boxes */
+.bg-primary {
+  background-color: #007bff; /* Primary Blue */
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Text Styling */
+h2.text-white {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Subheader Text Styling */
+h5 {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* Button Styling */
+button {
+  background-color: #28a745;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #218838;
+}
+
+/* Link Styling inside the Button */
+button a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .text-center {
+      padding: 15px;
+  }
+  h2.text-white {
+      font-size: 20px;
+  }
+  h5 {
+      font-size: 16px;
+  }
+}

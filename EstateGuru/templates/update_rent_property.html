@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container" >
+    <div class="row mt-5" id="cat1"> 
+        <h2>Update Details</h2>
+    </div>
+    <div class="container my-3 p-5 w-50 shadow bg-white">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ FM.as_p }}
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-lg">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="feedback py-5 mt-5">
+    <h1 class="feedback-title">Feedback Form</h1>
+    <form method="POST" class="feedback-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-submit">Submit</button>
+    </form>
+</div>
+{% endblock body %}

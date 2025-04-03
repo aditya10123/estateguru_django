@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        {% for i in rent_pro %}
+        <div class="col-md-4"> <!-- You can adjust the column size depending on your design -->
+            <div class="property-card mt-4 shadow-lg p-4 rounded">
+                
+                <div class="info">
+                    <h3 class="card-title text-uppercase font-weight-bold">{{ i.uid }}</h3>
+                    <p class="card-text text-muted">{{ i.pid }}</p>
+                    <h6>payment done</h6>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+  
+  <div class="row">
+    <div class="image-container">
+      <img src="static/image/indexpage.jpg" alt="Image description">
+      
+      <h3 class="text-overlay">Find Your Dream Home Today!</h3>
+
+
+ 
+  </div>
+
+
+
+
+ 
+  </div>
+
+  <div class="row" id="cat1"> 
+    <h2>Rental  Properties</h2>
+  </div> 
+        <section class="featured">
+        <div class="property-list">
+            {% for i in rent %}
+            <div class="property-card">
+                <img src="{{ i.image.url }}" class="card-img-top" alt="..." height="300px">
+                <div class="info">
+                    <h3 class="card-title text-uppercase">{{ i.title }}</h3>
+                    <p class="card-text ">Deposite payment: ₹{{ i.deposite_amount }}</p>
+                    <p class="card-text ">Booking only : ₹{{ i.price }}</p>
+
+                    <a href="{% url 'rent_propertydetails' i.id %}" class="btn btn-info w-100">View Property</a>
+
+                </div>
+            </div>
+         {% endfor %}
+            
+          
+            
+        </div>
+    </section> 
+
+
+
+    
+
+
+
+<section class="why-choose">
+  <h2>Why Choose Us?</h2>
+  <p>We offer personalized services with over 20 years of experience in helping people find their dream homes. Trust us to guide you every step of the way!</p>
+</section>
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="row" id="cat1"> 
+      <h2>Buy Properties</h2>
+      </div> 
+            <section class="featured">
+            <div class="property-list">
+                {% for i in pro %}
+                <div class="property-card">
+                    <img src="{{ i.image.url }}" class="card-img-top" alt="..." height="300px">
+                    <div class="info">
+                        <h3 class="card-title text-uppercase">{{ i.pro_name }}</h3>
+                        <p class="card-text ">Deposite payment: ₹{{ i.deposite_amount }}</p>
+
+                        <p class="card-text ">Booking only : ₹{{ i.pro_price }}</p>
+                        <a href="{% url 'visitpro' i.id %}" class="btn btn-info w-100">View Property</a>
+                    </div>
+                </div>
+             {% endfor %}      
+            </div>
+        </section> 
+    </div>
+  </div>
+
+
+
+{% endblock body %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+{% block main %}
+
+<div class="row mt-5">
+    <div class="col-md-9 mt-5"> 
+        {% for x in data %}
+            {% if forloop.counter == 1 %}
+                <h5 class="bg-danger text-white p-3">Customer details</h5>
+                <p><strong>Name:</strong>&nbsp;&nbsp;&nbsp;{{ x.customer.username }}</p>
+                <p><strong>Email:</strong>&nbsp;&nbsp;&nbsp;{{ x.customer.email }}</p>
+            {% endif %}
+        {% endfor %}
+
+
+        {% for x in data %}
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <img src="{{ x.pro_name.image.url }}" width="100%" height="200px" />
+                </div>
+                <div class="col-md-8">
+                    <p><strong>Property Name:</strong>&nbsp;&nbsp;&nbsp;{{ x.pro_name }}</p>
+                    <p><strong>Price:</strong>&nbsp;&nbsp;&nbsp;RS-{{ x.pro_name.pro_price }}</p>
+                   
+                 
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="col-md-3">
+        <h5 class="bg-danger text-white p-3 mt-5">Total amount</h5>
+        <p><strong>Total ({{ n }}):</strong> Rs.{{ total }}</p>
+        <hr>
+        <p><strong>Total Amount:</strong> Rs.{{ total }}</p>
+        <a href="{% url 'checkout' %}"><button  class="btn btn-outline-primary" >Make payment</button></a>
+    </div>
+</div>
+
+{% endblock main %}
+
+{% endblock body %}

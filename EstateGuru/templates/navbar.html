@@ -1,0 +1,109 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm" id="navbar">
+  <div class="container-fluid">
+    <!-- Brand Section -->
+    <a class="navbar-brand text-brand" href="{% url 'home' %}">
+      <span class="text-success">Estate</span>Guru
+    </a>
+
+    <!-- Navbar Toggle Button for Mobile View -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links Section -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+       
+        <!-- Admin Link (Only visible for superusers) -->
+        {% if user.is_authenticated and user.is_superuser %}
+      
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Add properties
+          </a>
+          <ul class="dropdown-menu" >
+            <li><a class="nav-link" href="{% url 'propertydetailsform' %}">Buy Property</a></li>
+            <li><a class="nav-link" href="{% url 'rentpropertydetails' %}"> Rent Property</a></li>
+          
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Manage properties
+          </a>
+          <ul class="dropdown-menu" >
+            <li><a class="nav-link" href="{% url 'managebuyproperty' %}"> Buy Property</a></li>
+            <li><a class="nav-link" href="{% url 'managerentproperty' %}">Rent Property</a></li>
+          
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout1' %}">Logout</a>
+        </li>
+     
+        {% elif user.is_authenticated %}
+        <!-- Links for authenticated but non-superuser users -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'feedback_form' %}">feedback</a>
+        </li> <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            payments
+          </a>
+          <ul class="dropdown-menu" >
+            <li><a class="nav-link" href="{% url 'buypaymentproperty' %}"> Buy payment</a></li>
+            <li><a class="nav-link" href="{% url 'paymentproperty' %}">Rent payment</a></li>
+          
+          </ul>
+        {% comment %} <li class="nav-item"><a class="nav-link" href="{% url 'paymentproperty' %}">payment</a></li> {% endcomment %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contactus' %}">contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout1' %}">Logout</a>
+        </li>
+     
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            services
+          </a>
+          <ul class="dropdown-menu" >
+            <li><a class="nav-link" href="{% url 'rent_property' %}">Rent</a></li>
+            <li><a class="nav-link" href="{% url 'buy_property' %}">Buy</a></li>
+          
+          </ul>
+        </li>
+        {% else %}
+        <!-- Links for unauthenticated users -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'register' %}">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Login</a>
+        </li>
+        {% endif %}
+      </ul>
+
+      <!-- Search Form -->
+      <form action="{% url 'searchproperty' %}" method="POST" class="d-flex ms-lg-4">
+        {% csrf_token %}
+        <input class="form-control me-0 search-input" type="text" placeholder="Search properties..." name="search" id="search" aria-label="Search">
+        <button class="btn btn-outline-primary search-btn" type="submit">
+          <i class="fa fa-search"></i> Search
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Welcome Message -->
+  {% if user.is_authenticated %}
+  <div class="navbar-text text-white d-none d-lg-block ms-4">
+    Welcome, {{ request.user.username|slice:":10" }}!!
+  </div>
+  {% endif %}
+</nav>

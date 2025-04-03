@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="container mt-5">
+{% for i in posts %}
+
+ {{i.pro_name}}
+
+
+
+{% endfor %}
+</div>
+<form action="" method ="POST"class="mt-5">
+    <div class="container mt-5">
+
+{% csrf_token %}
+
+{{form.as_p}}
+<input type="submit" name="" id="">
+
+</form>
+</div>
+{% endblock body %} 

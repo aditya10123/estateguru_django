@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container-fluid mt-2" id="book">
+    <div class="row">
+        <!-- Left Column: Customer Details -->
+        <div class="col-md-8">
+            {% for i in data %}
+                {% if forloop.counter == 1 %}
+                    <div class="card mb-4">
+                        <div class="card-header bg-success text-white">
+                            <h4>Customer Details</h4>
+                        </div>
+                        <div class="card-body">
+                            <h6><strong>Customer Name:</strong> {{i.uid.username}}</h6>
+                            <h6><strong>Customer Email:</strong> {{i.uid.email}}</h6>
+                        </div>
+                    </div>
+                {% endif %}
+                
+                <!-- Property List -->
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <img src="{{i.pid.image.url}}" class="img-fluid rounded shadow" alt="{{i.pid.pro_name}}" height="300px" width="300px">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">{{i.pid.pro_name}}</h5>
+                                <p class="card-text">{{i.pid.pro_price}}</p>
+
+                                <div class="mt-3">
+                                    <a href="{% url 'remove_property' i.pid.id %}"><button class="btn btn-warning">Remove Property</button></a>
+                                    <a href="{% url 'checkoutbuy' i.pid.id %}" class="btn btn-primary">Pay Amount</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>        
+    </div>
+</div>
+  
+{% endblock body %} 

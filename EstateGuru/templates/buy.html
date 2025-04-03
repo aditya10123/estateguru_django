@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+
+<div class="row" id="cat1"> 
+  <h2>Buy Properties</h2>
+  </div> 
+        <section class="featured">
+        <div class="property-list">
+            {% for i in pro %}
+            <div class="property-card">
+                <img src="{{ i.image.url }}" class="card-img-top" alt="..." height="300px">
+                <div class="info">
+                    <h3 class="card-title text-uppercase">{{ i.pro_name }}</h3>
+                    <p class="card-text ">Down payment: ₹{{ i.pro_price }}</p>
+                    <a href="{% url 'visitpro' i.id %}" class="btn btn-info w-100">View Property</a>
+                </div>
+            </div>
+         {% endfor %}      
+        </div>
+    </section> 
+</div>
+</div>
+{% endblock body %}

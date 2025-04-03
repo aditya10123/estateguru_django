@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="container mt-5">
+  <div class="container text-center p-1 rounded shadow bg-success mt-5">
+    <h2>Add  Rent Property Form</h2></div>
+    <div class="container my-3 p-5 w-50 shadow bg-white ">
+      <form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+{{ap.as_p}}
+
+<p>
+    <input class="btn btn-primary w-100" type="submit">
+</p>
+</form>
+</div>
+</div>
+
+{% endblock body %}
